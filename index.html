@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    "Rock Paper Scissors"
+</head>
+<main>
+    <script>
+        let result = 0;
+        let score = 0;
+        let random = 0;
+        let scoreboard = 0;
+        let a = 0;
+        let n = 0;
+        const playerSelection = "rock";
+        const computerSelection = 0;
+
+        //rock = 0, paper = 1, scissors = 2
+        function computerPlay(){
+            let random = Math.floor(Math.random() * 3);
+            return random;
+            //console.log(random)
+        }
+        function playerChoice(rox) {
+            let a = rox;
+            let result = "a";
+            if(a==="rock") {
+                let result = 0;
+                return result
+            }
+            if(a==="paper") {
+                let result = 1;
+                return result
+            }
+            else {
+                let result = 2;
+                return result
+            }
+            return(result)
+            //console.log(result)
+        }
+        function playRound(playerSelection){
+            let computerSelection = computerPlay();
+            if(playerChoice(playerSelection)===computerSelection){
+                let score = "Draw";
+                return score;
+            }
+            if(playerChoice(playerSelection) === computerSelection+1) {
+                let score = "You Lost";
+                return score;
+            }
+            else {
+                let score = "You Win!";
+                return score;
+            }
+        }
+        // parei aqui
+        function game() {
+            while(n < 5){
+                if (playRound(playerSelection) === "You Win!"){
+                    //let scoreboard = scoreboard + 1;
+                    let n = n + 1;
+                    return scoreboard;
+                }
+            }
+        }
+
+    </script>
+</main>
